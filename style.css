@@ -133,21 +133,61 @@ footer{
 /**************** Tablet Styles ***********************/
 
 @media screen and (min-width: 600px){
-  header{
-    display: flex;/* added by me*/
-    justify-content: space-between;
-    flex-direction: row;
-  }
-}
+  body{
+      background-color: purple;/*for guide purposes*/
+    }
 
+    header{
+      /*display: flex;*/
+      /*flex-wrap: nowrap; Loss of this had no impact, at the time.....*/
+      flex-direction: column;/*crucial to getting LOGO to stack over 3 nav elements*/
+      align-content: center;
+      /*display: flex;/* << unnecessary, this is inheritted/
+      /*justify-content: space-between;*/
+    }
+
+    #main_nav{
+      /*width: 75%; !!!! Finally, turning this off, allowed the elements to stack*/
+      display: flex; /* << unnecessary, this is inheritted*/
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: nowrap; /* finally, this converted the column to a row*/
+      /*text-align: center;*/
+      /*align-items: center;*/
+      width: 100%;
+    }
+
+    #main_nav a{
+    /*display: block;/* flex here uncenters the text with respect to the block*/;*/
+    /*width: 100%;/* adding this made the pink boxes expand*/*/
+    /*flex-basis: auto; This doesn't help*/
+    /*padding: 10px 2%;*/
+    width: 80%;
+    flex-shrink: 0.6;
+    /*width:95%;  neither of these seem to be sufficient.... I have no idead how to create space between these elements*/
+    height: 10%px;
+    /*flex-shrink: : 1;*/
+    }
+
+    #sidebar_content {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+    }
+
+    #sidebar_content div{
+      /*width: 100%;*/
+      flex-grow: 1;
+    }
+}
 
 
 
 /**************** Desktop Styles ***********************/
-@media screen and (min-width: 1100px){
+/*@media screen and (min-width: 1100px){
   header{
     display: flex;/* added by me*/
-    justify-content: space-between;
-    flex-direction: row;
+    /*justify-content: space-between;
+    flex-direction: row;*/
   }
-}
+}*/
