@@ -67,6 +67,9 @@ footer{
   padding: 10px;
   margin: 10px 0 10px 0;/* changed to percentage or not....
   /*margin: 3% 0 3% 0;*/
+  text-align: center;
+  /*display: flex;
+  flex-wrap: wrap;/* This shoved everything to the left. Try the next child container instead.*/
 }
 
 
@@ -111,17 +114,21 @@ footer{
 #main_content{
   background-color: #ddffff;
   padding: 10px;
-  margin: 10px 0px 10px 0; 
+  margin: 10px 0px 10px 0;
 }
 
 
 #sidebar_content div{
   background-color: #ffffdd;
   padding: 10px;
-  /*margin: 10px 0 10px 0;*/ changed to percentage
-  margin: 1% 0 1% 0;
+  margin: 10px 0 10px 0;
+  /*margin: 1% 0 1% 0; I tried percentage*/
   }
 
+#site_footer nav{
+  display: flex;
+  justify-content: space-around;
+}
 
 /**************** Tablet Styles ***********************/
 
